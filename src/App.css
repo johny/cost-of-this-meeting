@@ -1,0 +1,27 @@
+.app {}
+
+.app__header {
+  background: #2980b9;
+  padding: 1rem;
+  text-align: center;
+}
+
+.app__title {
+  color: #ecf0f1;
+  font-weight: 500;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.app__content {
+  text-align: center;
+}
+
+.counter {
+  font-size: 10rem;
+  color: #8e44ad;
+}
+
+.counter__value {
+  margin-right: 1rem;
+}
