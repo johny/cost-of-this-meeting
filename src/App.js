@@ -32,7 +32,7 @@ class Counter extends Component {
     return (
       <div className='counter'>
         <span className='counter__value'>{parseFloat(Math.round(this.state.value * 1000) / 1000).toFixed(3)}</span>
-        <span className="counter_currency">€</span>
+        <span className="counter__currency">€</span>
       </div>
     );
   }
