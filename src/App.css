@@ -1,10 +1,7 @@
-.app {}
-
-.app__header {
-  background: #2980b9;
-  padding: 1rem;
+.app {
   text-align: center;
 }
+
 
 .app__title {
   color: #ecf0f1;
