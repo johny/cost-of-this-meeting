@@ -1,24 +1,80 @@
+body {
+  background: #27ae60;
+  color: #fff;
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .app {
   text-align: center;
+  padding: 1rem 0 0 0;
 }
-
 
 .app__title {
-  color: #ecf0f1;
-  font-weight: 500;
-  font-size: 3rem;
-  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-weight: 100;
+  font-size: 5rem;
+  padding: 2rem;
+  margin: 1rem;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-.app__content {
+.meeting__options {
+  padding: 1rem;
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.meeting__option {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  padding: 0.8rem 0.25rem;
+  min-width: 1rem;
+  max-width: 5rem;
   text-align: center;
+  background: none;
+  border: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.2rem;
+  outline: none;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.meeting__button {
+  border: none;
+  background: none;
+  padding: 1rem;
+  margin: 2rem 0 0 0;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.meeting__button:hover {
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .counter {
   font-size: 10rem;
-  color: #8e44ad;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-.counter__value {
-  margin-right: 1rem;
+.counter__currency {
+  margin-left: 1rem;
+}
+
+.counter__meta {
+  font-size: 1rem;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.counter__separator {
+  margin: 0 1rem;
 }

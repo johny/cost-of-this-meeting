@@ -1,22 +1,18 @@
-import React, { Component } from 'react';
-import { Router, Route, hashHistory } from 'react-router';
+import React from 'react';
 
-import Home from './views/home';
-import Meeting from './views/meeting';
+import MeetingMeter from './components/MeetingMeter';
 
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="app">
-        <Router history={hashHistory}>
-          <Route path='/' component={Home} />
-          <Route path='/meeting' component={Meeting} />
-        </Router>
+const App = () => {
+  return(
+    <div className="app">
+      <h1 className="app__title">Meeting Meter</h1>
+      <div className="app_content">
+        <MeetingMeter />
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default App;
