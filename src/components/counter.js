@@ -59,8 +59,7 @@ class Counter extends Component {
   }
 
   updateTitle() {
-    const currentTitle = document.title.split(':');
-    const newTitle = `${currentTitle[0]}: ${this.getFormattedCost()} €`;
+    const newTitle = `${this.getFormattedCost()} € - Cost of this meeting`;
     document.title = newTitle;
   }
 
