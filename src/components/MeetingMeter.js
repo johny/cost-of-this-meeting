@@ -8,17 +8,33 @@ class MeetingMeter extends Component {
     super(props)
 
     this.state = {
-      counting: false,
-      people: 8,
+      counterMode: false,
+      multiplier: 8,
       value: 60
     }
 
     this.startCounting = this.startCounting.bind(this);
+
+    this.onMultiplierChange = this.onMultiplierChange.bind(this);
+    this.onValueChange = this.onValueChange.bind(this);
+
+  }
+
+  onMultiplierChange(e) {
+    this.setState({
+      multiplier: e.target.value
+    });
+  }
+
+  onValueChange(e) {
+    this.setState({
+      value: e.target.value
+    });
   }
 
   startCounting() {
     this.setState({
-      counting: true
+      counterMode: true
     });
   }
 
@@ -31,18 +47,18 @@ class MeetingMeter extends Component {
   }
 
   renderCounter() {
-    return <Counter value={this.state.value} multiplier={this.state.people} />
+    return <Counter baseValue={this.state.value} multiplier={this.state.multiplier} />
   }
 
   renderOptions() {
     return (
       <div className="meeting__options">
         There are
-        <input type="number" min="2" max="20" step="1" className="meeting__option" defaultValue={this.state.people} />
+        <input type="number" min="2" max="20" step="1" className="meeting__option" defaultValue={this.state.multiplier} onChange={this.onMultiplierChange} />
         people sitting in this meeting,
         <br />
         each billing
-        <input type="number" min="10" max="200" className="meeting__option" defaultValue={this.state.value} />
+        <input type="number" min="10" max="200" className="meeting__option" defaultValue={this.state.value} onChange={this.onValueChange} />
         EUR per hour.
       </div>
     );
@@ -52,7 +68,7 @@ class MeetingMeter extends Component {
     return (
       <div className="meeting">
         {this.renderOptions()}
-        {this.state.counting ? this.renderCounter() : this.renderButton()}
+        {this.state.counterMode ? this.renderCounter() : this.renderButton()}
       </div>
     );
   }

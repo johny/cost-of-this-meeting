@@ -5,6 +5,22 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+body.is-counting {
+  animation: colorchage 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorchage {
+  0% { background: #27ae60;}
+  15% { background: #16a085}
+  30% { background: #f39c12}
+  45% { background: #d35400}
+  60% { background: #c0392b}
+  75% { background: #8e44ad}
+  90% { background: #2980b9}
+  100% { background: #27ae60;}
+}
+
 .app {
   text-align: center;
   padding: 1rem 0 0 0;
@@ -15,7 +31,7 @@ body {
   letter-spacing: 1rem;
   font-weight: 100;
   font-size: 5rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
   margin: 1rem;
   border: 1px dashed rgba(255, 255, 255, 0.5);
   display: inline-block;
@@ -63,7 +79,7 @@ body {
 .counter {
   font-size: 10rem;
   font-weight: 400;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
 
 .counter__currency {
@@ -71,10 +87,13 @@ body {
 }
 
 .counter__meta {
+  margin: 1rem 0;
   font-size: 1rem;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  text-shadow: none;
+  font-weight: 200;
+  letter-spacing: 1px;
 }
 
 .counter__separator {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
