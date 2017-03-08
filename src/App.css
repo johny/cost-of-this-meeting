@@ -6,7 +6,7 @@ body {
 }
 
 body.is-counting {
-  animation: colorchage 7s;
+  animation: colorchage 1800s;
   animation-iteration-count: infinite;
 }
 
@@ -28,10 +28,10 @@ body.is-counting {
 
 .app__title {
   text-transform: uppercase;
-  letter-spacing: 1rem;
+  letter-spacing: 0.1rem;
   font-weight: 100;
-  font-size: 5rem;
-  padding: 1rem 2rem;
+  font-size: 4rem;
+  padding: 1rem 1rem;
   margin: 1rem;
   border: 1px dashed rgba(255, 255, 255, 0.5);
   display: inline-block;

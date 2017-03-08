@@ -17,3 +17,7 @@ npm-debug.log
 # editors
 .idea
 .vscode
+
+# custom
+deploy.sh
+public/google*
